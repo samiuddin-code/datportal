@@ -1,0 +1,70 @@
+body {
+  .overlay {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 36rem;
+    right: 0.1rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 1.5rem;
+
+
+    @media (max-width: 991px) {
+      width: 25rem;
+      position: absolute;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+  }
+
+  .overlay_footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .overlay_footer_btn {
+    background-color: #F4F5F7;
+    color: #6B778C;
+    border-color: transparent;
+    margin-right: 5px;
+
+    &:hover {
+      border-radius: 6px;
+    }
+  }
+
+  .recentWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: var(--color-light-100);
+    }
+  }
+
+  .recentWrap_item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    &>img {
+      border-radius: 0.5rem;
+      height: 2.5rem;
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+}
+
+.searchInput {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

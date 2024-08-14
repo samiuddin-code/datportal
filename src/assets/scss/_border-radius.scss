@@ -1,0 +1,12 @@
+$border-radius: (5,10, 15, 20, 25, 30, 40, 50);
+
+@each $size in $border-radius{
+    .rounded-#{$size}{
+        border-radius: #{$size}px;
+    }
+}
+
+.rounded-full{
+    border-radius: 100%;
+}
+

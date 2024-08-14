@@ -1,0 +1,110 @@
+$container-sizes: (
+    1400,
+    1200,
+    1000,
+    800,
+    600,
+    500,
+    400,
+    300,
+    250,
+    200,
+    150,
+    120,
+    100,
+    75,
+    50,
+    40,
+    30,
+    25,
+    20,
+    10
+);
+$container-sizes-in-percentage: (
+    200,
+    150,
+    100,
+    90,
+    80,
+    75,
+    70,
+    60,
+    50,
+    40,
+    30,
+    25,
+    20,
+    10
+);
+
+@each $size in $container-sizes {
+    .w-#{$size} {
+        width: #{$size}px;
+        max-width: 100%;
+
+    }
+
+    .h-#{$size} {
+        height: #{$size}px;
+        max-height: 100%;
+
+    }
+
+    .\!w-#{$size} {
+        width: #{$size}px !important;
+        max-width: 100% !important;
+
+    }
+
+    .\!h-#{$size} {
+        height: #{$size}px !important;
+        max-height: 100% !important;
+
+    }
+}
+
+
+$width_annotation: '%';
+
+@each $size in $container-sizes-in-percentage {
+    .w-#{$size}-percentage {
+        max-width: 100%;
+        width: #{$size}#{$width_annotation}
+    }
+}
+
+
+
+@each $size in $container-sizes {
+    .w-min-#{$size} {
+        min-width: #{$size}px;
+        max-width: 100%;
+    }
+
+    .h-min-#{$size} {
+        min-height: #{$size}px;
+        max-height: 100%;
+    }
+}
+
+
+@each $size in $container-sizes {
+    .w-max-#{$size}-fixed {
+        max-width: #{$size}px;
+    }
+
+    .h-max-#{$size}-fixed {
+        max-height: #{$size}px;
+    }
+}
+
+
+@each $size in $container-sizes-in-percentage {
+    .w-max-#{$size} {
+        max-width: #{$size}#{$width_annotation};
+    }
+
+    .h-max-#{$size} {
+        max-height: #{$size}#{$width_annotation};
+    }
+}

@@ -1,0 +1,53 @@
+.details {
+  margin: 0.5rem;
+}
+
+.details_card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--color-light-900);
+  border-radius: 5px;
+}
+
+.details_item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.details_item_label {
+  font-size: var(--font-size-sm);
+  margin-bottom: 0;
+  max-width: 30%;
+  width: 100%;
+}
+
+.details_item_value {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-normal);
+  margin-bottom: 0;
+  gap: 0.5rem;
+}
+
+.members {
+  margin-top: 0.5rem;
+}
+
+.members_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.members_item_name {
+  font-size: var(--font-size-sm);
+  margin-bottom: 0;
+  padding-left: 0.5rem;
+}

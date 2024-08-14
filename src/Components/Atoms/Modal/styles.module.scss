@@ -1,0 +1,20 @@
+.modal {
+    max-height: 85vh;
+    max-width: 85vw;
+    border-radius: 5px;
+
+    @media(max-width: 575px) {
+        max-width: 95vw;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}
+
+.title {
+    padding-top: 1rem;
+    border-radius: 5px;
+}

@@ -1,0 +1,80 @@
+.quotation_container {
+    width: 100%;
+    height: 150px;
+    overflow-y: scroll;
+
+    // style the scrollbar
+    &::-webkit-scrollbar {
+        width: 7px;
+        background: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: var(--color-dark-sub) !important;
+        border: 3px solid var(--color-dark-sub) !important;
+    }
+}
+
+.quotation_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.rte_editor {
+    height: 150px !important;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.accordianItem {
+    &>p {
+        margin-bottom: 0;
+    }
+}
+
+.total {
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.total_item {
+    display: flex;
+    padding: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.date_picker {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid var(--color-border-sub);
+    border-radius: 5px;
+}
+
+.z_index {
+    z-index: 10000
+}
+
+.date_footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+    padding: 10px;
+}
+
+.gen_border {
+    border: 2px solid var(--color-border-sub);
+    border-radius: 5px;
+}

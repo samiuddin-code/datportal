@@ -1,0 +1,14 @@
+.sharedFiles {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sharedFiles__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 75%;
+}

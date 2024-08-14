@@ -1,0 +1,22 @@
+// styles
+.selfieImage{
+    max-height: 80px;
+    width: auto;
+}
+
+.entryTypeStyles{
+    text-transform: capitalize;
+    color: var(--color-dark-main);
+    font-size: var(--font-size-sm);
+    }
+
+    .wrapperEntryTypes{
+        display: flex;
+        gap: 10px;
+        justify-items: center;
+        line-height: 1;
+    }
+
+    .forceStyle{
+        color: var(--color-red-yp);
+    }

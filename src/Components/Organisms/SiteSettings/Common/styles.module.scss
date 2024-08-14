@@ -1,0 +1,75 @@
+.actions {
+	display: flex;
+	gap: 1rem;
+
+	&>span {
+		height: 1.5rem;
+		aspect-ratio: 1;
+		cursor: pointer;
+		background-color: var(--color-primary-main);
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.bg__red {
+		background-color: var(--color-red-yp);
+
+		&>svg {
+			fill: var(--color-light-100);
+		}
+	}
+}
+
+.form {
+	&>div {
+		display: flex;
+		gap: 1rem;
+
+		&>div,
+		&>span {
+			width: 100%;
+		}
+	}
+
+	.footer {
+		justify-content: flex-end;
+		padding-top: 2rem;
+	}
+}
+
+.antdTableWrapper {
+	clear: both;
+	max-width: 100%;
+	overflow: auto;
+}
+
+.more__icon {
+	cursor: pointer;
+	padding: 0.9rem 0;
+}
+
+.bg_primary {
+	height: 1.5rem;
+	width: 1.5rem;
+	padding: 0.2rem;
+	aspect-ratio: 1;
+	background-color: var(--color-primary-main);
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg_red {
+	height: 1.5rem;
+	width: 1.5rem;
+	padding: 0.2rem;
+	aspect-ratio: 1;
+	background-color: var(--color-red-yp);
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

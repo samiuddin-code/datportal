@@ -1,0 +1,9 @@
+// action constants
+
+export const SET_PACKAGE_DATA = "SET_PACKAGE_DATA";
+export const ADD_PACKAGE_DATA = "ADD_PACKAGE_DATA";
+export const EDIT_PACKAGE_DATA = "EDIT_PACKAGE_DATA";
+export const DELETE_PACKAGE_DATA = "DELETE_PACKAGE_DATA";
+export const GET_SINGLE_PACKAGE_DATA = "GET_SINGLE_PACKAGE_DATA";
+
+// types

@@ -1,0 +1,31 @@
+
+
+.updateTitle {
+    position: relative;
+    input {
+        font-size: var(--font-size-sm);
+        color: var(--color-dark-main);
+        height: 1rem;
+        padding-left: 0;
+    }
+    &>div{
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        padding-left: 0.25rem;
+        padding-top: 0.375rem;
+    }
+
+    .buttonWrap {
+        position: absolute;
+        bottom: -2.5rem;
+        right: 0;
+        display: flex;
+        gap: 0.25rem;
+
+        &>button {
+            box-shadow: 1.5px 3px 20px var(--color-light-100);
+            border-radius: 0.25rem;
+        }
+    }
+}

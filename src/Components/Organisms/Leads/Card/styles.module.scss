@@ -1,0 +1,108 @@
+.leads {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+
+    @media screen and (max-width: 820px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.lead_item {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    color: var(--color-dark-main);
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.lead_item_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.lead_item_header_left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lead_item_header_actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: fit-content;
+}
+
+.lead_item_header_actions_items {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-row-end: auto;
+    align-items: center;
+    width: fit-content;
+    gap: 10px;
+}
+
+.lead_item_header_actions_status {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.lead_item_header_actions_more {
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+        background-color: var(--color-active);
+    }
+}
+
+.lead_item_header_title {
+    font-size: var(--font-size-normal);
+    margin-bottom: 0;
+
+}
+
+.lead_item_header_email {
+    font-size: var(--font-size-xs);
+    color: var(--color-dark-sub);
+    margin-bottom: 0.2rem !important;
+}
+
+.lead_item_header_phone {
+    font-size: var(--font-size-xs);
+    color: var(--color-dark-sub);
+    margin-bottom: 0;
+}
+
+.lead_item_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}

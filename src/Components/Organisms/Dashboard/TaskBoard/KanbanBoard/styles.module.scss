@@ -1,0 +1,74 @@
+//kanban
+.board {
+	display: flex;
+	gap: 1rem;
+	margin: 0 auto;
+	width: 100%;
+	flex-grow: 1;
+	overflow-x: auto;
+}
+
+.column {
+	flex-grow: 1;
+	min-width: 26vw;
+	border-radius: 0.25rem;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	margin: 0 auto;
+	background-color: var(--color-light);
+
+	@media (max-width: 575px) {
+		width: 75vw;
+	}
+}
+
+.columnHead {
+	display: block;
+	padding: 1rem 0.5rem;
+	border-radius: 0.25rem 0.25rem 0 0;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: var(--color-dark-400);
+	font-weight: 500;
+}
+
+.kanbanItem {
+	display: flex;
+	flex-direction: column;
+	min-height: 3.5vw;
+	gap: 1rem;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	font-size: var(--font-size-sm);
+	cursor: pointer;
+	background-color: #fff;
+	box-shadow: 1px 1px var(--color-light-200);
+	color: var(--color-dark-main);
+}
+
+.kanbanItem:hover {
+	background-color: var(--color-primary-main-100);
+}
+
+.kanbanItemBottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.priorityPill {
+	border-radius: 1rem;
+	padding: 0.25rem 0.5rem;
+	font-size: 0.6rem;
+	color: #fff;
+}
+
+.kanbanItemBottomBottom {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.file {
+	color: var(--color-light-300);
+}

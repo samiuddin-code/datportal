@@ -1,0 +1,150 @@
+body {
+  .labelWrap {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    font-size: var(--font-size-sm) !important;
+
+    &>span {
+      color: var(--color-dark-main);
+
+      &>svg {
+        cursor: pointer;
+        fill: var(--color-dark-100);
+      }
+    }
+  }
+
+  .asterisk {
+    padding: 0px 2px;
+    color: var(--color-red-yp) !important;
+  }
+
+  .inputWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .floatingLabel {
+      z-index: 5;
+      position: absolute;
+      left: 3rem;
+      pointer-events: none;
+      padding: 0 2px;
+    }
+
+    .floatingLabel_float {
+      top: -10px;
+      background-color: var(--color-light-100);
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: calc(50% + 2px);
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        background: var(--color-light-150);
+        z-index: 2;
+      }
+
+      span {
+        position: relative;
+        z-index: 7;
+      }
+    }
+  }
+
+  .inpt {
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-light-150);
+    border: 2px solid var(--color-border);
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: var(--color-border);
+      border-color: var(--color-border) !important;
+
+      // box-shadow: 0 0 0 1px var(--color-border);
+      input {
+        background: var(--color-border);
+        border: none;
+      }
+    }
+
+    input,
+    textarea {
+      background: var(--color-light-150);
+      position: relative;
+      color: var(--color-dark-main);
+      font-size: var(--font-size-sm);
+
+      &::placeholder {
+        color: var(--color-placeHolder);
+        font-size: var(--font-size-sm);
+      }
+    }
+  }
+
+  .sm {
+    width: 15rem;
+    height: 2rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
+  }
+
+  .w100 {
+    width: 100%;
+  }
+
+  .md {
+    width: 20rem;
+    height: 2rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .lg {
+    width: 24rem;
+    height: 2.4rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .xl {
+    width: 28rem;
+    height: 2.4rem;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .float-label {
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  .label {
+    font-size: var(--font-size-sm);
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 12px;
+    transition: 0.2s ease all;
+  }
+
+  .label-float {
+    top: 6px;
+    font-size: 10px;
+  }
+
+  .prefixIcon {
+    padding: 0rem 0.5rem;
+
+    svg {
+      fill: #42526e;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.header {
+	background-color: white;
+	border-bottom: 1px solid var(--color-border);
+	padding: 10px 15px;
+}
+
+.content {
+	width: 600px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	flex-direction: column;
+}
+
+.contentHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.content__layout {
+	width: 100%;
+	padding: 40px 0;
+
+	.content__layout__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.content__layout__content {
+		padding-top: 20px;
+	}
+}
+
+.content__layout__footer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 10px;
+
+	.content__layout__footer__button {
+		background-color: var(--color-blue-yp);
+		color: white;
+		border: 1px solid var(--color-blue-yp);
+		border-radius: 5px;
+		font-size: var(--font-size-sm);
+		padding: 10px 20px;
+		cursor: pointer;
+		margin-left: auto;
+	}
+}
+
+
+//Actions Style
+.actions {
+	display: flex;
+	align-items: center;
+	background-color: #F2F2F2;
+	border-radius: 5px;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #000000;
+	cursor: pointer;
+	width: fit-content;
+
+	&:hover {
+		background-color: var(--color-active);
+	}
+}
+
+.form {
+	&>div {
+		display: flex;
+		gap: 1rem;
+
+		&>div,
+		&>span {
+			width: 100%;
+		}
+	}
+
+	.footer {
+		justify-content: flex-end;
+		padding-top: 2rem;
+	}
+}
+
+.opacity_6 {
+	opacity: 0.6;
+}
+
+.dropdown {
+	cursor: pointer;
+}
+
+.overlay {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+}
+
+.overlay_item {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	margin: 0.4rem 0;
+	width: 100%;
+}
+
+.overlay_popConfirm {
+	cursor: pointer;
+}
+
+.disabledButton {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.tabs {
+	gap: 0 !important;
+}
+
+.message {
+	white-space: pre-wrap;
+}
+
+.container {
+	min-height: 5rem;
+}
+
+.container:hover {
+	.button {
+		display: block;
+	}
+}

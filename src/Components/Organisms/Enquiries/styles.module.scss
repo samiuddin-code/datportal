@@ -1,0 +1,155 @@
+//Actions Style
+.actions {
+  display: flex;
+  gap: 1rem;
+
+  &>span {
+    height: 1.5rem;
+    aspect-ratio: 1;
+    cursor: pointer;
+    background-color: var(--color-primary-main);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg__red {
+    background-color: var(--color-red-yp);
+
+    &>svg {
+      fill: var(--color-light-100);
+    }
+  }
+}
+
+.form {
+  &>div {
+    display: flex;
+    gap: 1rem;
+
+    &>div,
+    &>span {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    justify-content: flex-end;
+    padding-top: 2rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 0;
+}
+
+.opacity_6 {
+  opacity: 0.6;
+}
+
+.dropdown {
+  cursor: pointer;
+  width: 100%;
+}
+
+.overlay {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.overlay_item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0.4rem 0;
+  width: 100%;
+}
+
+.overlay_popConfirm {
+  cursor: pointer;
+}
+
+.disabledButton {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  white-space: pre-wrap;
+}
+
+.notesTitle {
+  text-decoration: underline;
+}
+
+.note {
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 1px solid var(--color-light-100);
+}
+
+.qualifyButton {
+  border-radius: 0px !important;
+  margin-right: 0.5rem;
+  background-color: white;
+}
+
+.status {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--color-light-900);
+  padding: 0.25rem 0.5rem;
+  margin: 0 auto 0 0;
+}
+
+.manage_media_photo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.manage_media_photo_image {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.manage_media_photo_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.media_photo_actions {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.phoneCode {
+  border-radius: 1rem !important
+}
+
+.date_picker {
+  width: 100%;
+  border: 2px solid var(--color-border-sub);
+  border-radius: 5px;
+}
+
+.z_index {
+  z-index: 10000
+}
+
+.date_footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  padding: 10px;
+}

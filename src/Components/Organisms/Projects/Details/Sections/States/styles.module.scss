@@ -1,0 +1,28 @@
+.dropdownOverlay {
+    max-height: 300px !important;
+    width: 400px !important;
+    overflow-y: auto !important;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdownContainer {
+    background-color: white;
+    position: relative;
+    width: 100%;
+}
+
+.searchContainer {
+    z-index: 100;
+    display: flex;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.searchInput {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}

@@ -1,0 +1,115 @@
+.container {
+	display: flex;
+	width: 100%;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.card {
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--color-border);
+	color: var(--color-dark-main);
+	width: calc(33% - 0.5rem);
+
+	@media (max-width: 768px) {
+		width: calc(50% - 0.5rem);
+	}
+
+	@media (max-width: 575px) {
+		width: 100%;
+	}
+
+	.cardBody {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		justify-content: space-between;
+		height: 100%;
+
+		.cardBodyTop {
+			display: flex;
+			gap: 0.5rem;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+
+			.topRight {
+				display: flex;
+				gap: 0.5rem;
+				.file {
+					color: var(--color-light-400);
+				}
+			}
+
+			.cardTitle {
+				font-size: var(--font-size-sm);
+				color: var(--color-dark-main);
+			}
+
+			.status {
+				text-transform: capitalize;
+				padding: 0.125rem 0.5rem;
+				border-radius: 1rem;
+				color: white;
+				font-size: var(--font-size-xs);
+			}
+		}
+
+		.cardBodyMiddle {
+			display: flex;
+			flex-direction: column;
+
+			.purpose {
+				font-size: var(--font-size-normal);
+				font-weight: 600;
+				color: var(--color-dark-main);
+			}
+		}
+
+		.cardBodyEnd {
+			display: flex;
+			gap: 0.25rem;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+
+			.dateWrap {
+				display: flex;
+				gap: 0.25rem;
+
+				.fromDate {
+					font-size: var(--font-size-xs);
+				}
+
+				.bold {
+					font-weight: 600;
+					font-size: var(--font-size-xs);
+				}
+			}
+
+			.date {
+				font-size: var(--font-size-sm);
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.card {
+		.cardBody {
+			.cardBodyEnd {
+				.dateWrap {
+					.fromDate {
+						font-size: var(--font-size-sm);
+					}
+
+					.bold {
+						font-weight: 600;
+						font-size: var(--font-size-sm);
+					}
+				}
+			}
+		}
+	}
+}

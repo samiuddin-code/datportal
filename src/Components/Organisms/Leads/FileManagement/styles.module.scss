@@ -1,0 +1,24 @@
+.manage_media_photo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.manage_media_photo_image {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.manage_media_photo_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.media_photo_actions {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}

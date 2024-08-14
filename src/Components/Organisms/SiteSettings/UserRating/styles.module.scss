@@ -1,0 +1,295 @@
+.rolePermissionAsideContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	height: 100%;
+	overflow-y: auto;
+	padding-right: 10px;
+	background-color: #f2f2f2;
+	padding: 15px;
+	padding-top: 30px;
+
+	&>span {
+		display: flex;
+		justify-content: space-between;
+		padding-inline-end: 0.5rem;
+		cursor: pointer;
+
+		&>.active,
+		&:hover {
+			background-color: var(--color-active);
+		}
+
+		&>.active {
+			&>span {
+				padding: 0px 1rem;
+				border-left: 3px solid var(--color-dark-main);
+			}
+		}
+
+		&>img {
+			filter: grayscale(1);
+		}
+
+		&:hover {
+			&>img {
+				filter: grayscale(0);
+			}
+		}
+	}
+}
+
+.sideBarHeading {
+	padding-inline-start: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	&>img {
+		height: 2rem;
+		aspect-ratio: 1;
+		object-fit: contain;
+	}
+
+	&>div {
+		&>span {
+			display: flex;
+		}
+	}
+}
+
+.adminNavPanelsWrap {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+	// gap: .2rem;
+}
+
+.textWithIcon {
+	cursor: pointer;
+	border-radius: 0.5rem;
+	padding: 0.5rem 0px;
+	margin: 0.2rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 12.8px;
+	color: var(--color-dark-main);
+
+	&>div {
+		height: 0.6rem;
+		margin-inline-end: 3px;
+	}
+
+	&>img {
+		filter: grayscale(1);
+	}
+
+	&:hover {
+		background-color: var(--color-active);
+
+		&>img {
+			filter: grayscale(0);
+		}
+	}
+
+	&.active {
+		&>div {
+			border-left: 3px solid var(--color-dark-main);
+			margin-inline-end: 0px;
+		}
+
+		background-color: var(--color-active);
+	}
+
+	&__rev {
+		justify-content: space-around !important;
+
+		&>img {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.collapse {
+	background: var(--color-inactive);
+	border-radius: 0.5rem;
+
+	&__normal {
+		background-color: var(--color-light-150);
+	}
+
+	&.active {
+		background: var(--color-active-light);
+	}
+}
+
+.divider {
+	margin: 0.75rem 0px;
+	border-bottom: 2px solid var(--color-border);
+}
+
+.translated {
+	transform: translateX(0);
+}
+
+.animateTranslation {
+	animation: __translate;
+	animation-duration: 0.4s;
+}
+
+.negAnimateTranslation {
+	animation: __negTranslate;
+	animation-duration: 0.4s;
+}
+
+@keyframes __translate {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes __negTranslate {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.header {
+	background-color: white;
+	border-bottom: 1px solid var(--color-border);
+	padding: 10px 15px;
+}
+
+.content {
+	width: 600px;
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 35px;
+	flex-direction: column;
+}
+
+.contentHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.content__layout {
+	width: 100%;
+	padding: 40px 0;
+
+	.content__layout__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.content__layout__content {
+		padding-top: 20px;
+	}
+}
+
+.content__layout__footer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 10px;
+
+	.content__layout__footer__button {
+		background-color: var(--color-blue-yp);
+		color: white;
+		border: 1px solid var(--color-blue-yp);
+		border-radius: 5px;
+		font-size: var(--font-size-sm);
+		padding: 10px 20px;
+		cursor: pointer;
+		margin-left: auto;
+	}
+}
+
+
+//Actions Style
+.actions {
+	display: flex;
+	gap: 1rem;
+
+	&>span {
+		height: 1.5rem;
+		aspect-ratio: 1;
+		cursor: pointer;
+		background-color: var(--color-primary-main);
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.bg__red {
+		background-color: var(--color-red-yp);
+
+		&>svg {
+			fill: var(--color-light-100);
+		}
+	}
+}
+
+.form {
+	&>div {
+		display: flex;
+		gap: 1rem;
+
+		&>div,
+		&>span {
+			width: 100%;
+		}
+	}
+
+	.footer {
+		justify-content: flex-end;
+		padding-top: 2rem;
+	}
+}
+
+.opacity_6 {
+	opacity: 0.6;
+}
+
+.dropdown {
+	cursor: pointer;
+}
+
+.overlay {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
+}
+
+.overlay_item {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	margin: 0.4rem 0;
+	width: 100%;
+}
+
+.overlay_popConfirm {
+	cursor: pointer;
+}
+
+.disabledButton {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

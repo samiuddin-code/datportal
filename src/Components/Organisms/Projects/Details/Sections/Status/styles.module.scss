@@ -1,0 +1,27 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.holdBy {
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.holdBy_user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.holdBy_user_name {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    font-weight: normal;
+}

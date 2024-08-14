@@ -1,0 +1,57 @@
+.active_projects__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: var(--color-inactive);
+    }
+}
+
+.delayed_projects__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        background-color: var(--color-inactive);
+    }
+}
+
+.project_trend_by_location__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+
+    &:hover {
+        background-color: var(--color-inactive);
+    }
+}
+
+.active_projects__item__title,
+.active_projects__item__date ,
+.delayed_projects__item__title{
+    color: var(--color-dark-main);
+}
+.active_projects__item__date{
+    min-width: 80px;
+    width: 80px;
+}
+
+.delayed_projects__item__date{
+    color: var(--color-red-yp);
+}

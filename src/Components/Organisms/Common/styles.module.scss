@@ -1,0 +1,80 @@
+.actions {
+	display: flex;
+	gap: 1rem;
+
+	& > span {
+		height: 1.5rem;
+		aspect-ratio: 1;
+		cursor: pointer;
+		background-color: var(--color-primary-main);
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.bg__red {
+		background-color: var(--color-red-yp);
+
+		& > svg {
+			fill: var(--color-light-100);
+		}
+	}
+}
+
+.form {
+	& > div {
+		display: flex;
+		gap: 1rem;
+
+		& > div,
+		& > span {
+			width: 100%;
+		}
+
+		@media (max-width: 575px) {
+			flex-direction: column;
+		}
+	}
+
+	.footer {
+		justify-content: flex-end;
+		padding-top: 2rem;
+
+		@media (max-width: 575px) {
+			padding-top: 1rem;
+		}
+	}
+}
+
+.antdTableWrapper {
+	max-height: calc(100vh - 270px);
+	clear: both;
+	max-width: 100%;
+	overflow: auto;
+
+	@media (max-width: 575px) {
+		max-height: calc(87vh - 270px);
+	}
+
+	@media (max-width: 375px) {
+		max-height: 44vh;
+	}
+}
+
+.filterWrapper {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+.bg__red {
+	background-color: var(--color-red-yp);
+	padding: 5px;
+	border-radius: 5px;
+
+	& > svg {
+		fill: var(--color-light-100);
+	}
+}

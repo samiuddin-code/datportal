@@ -1,0 +1,250 @@
+body .alert {
+    background-color: #CADEFC;
+}
+
+.AccountSettingsWrapper {
+    max-width: 950px;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+.orgWrapper {
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 700px) {
+        margin-left: 0;
+    }
+}
+
+.AccountSettingsWrapper_item2 {
+    @media (max-width: 700px) {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+}
+
+.AccountSettingsSecurity {
+    margin: 2rem auto 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border: 0;
+}
+
+.profile {
+    width: 15rem;
+    margin-left: 2rem;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        margin-left: 0;
+
+    }
+}
+
+.profile_header {
+    background-color: #CADEFC;
+    padding: 2rem 0;
+}
+
+.profile_viewer {
+    display: flex;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width:450px) {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+.addSocialLinkWrap {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &>button {
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+    }
+
+    .addSocialLink {
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &>div {
+            display: flex;
+            gap: 1rem;
+
+            &>div {
+                margin: 0px;
+            }
+
+            &>button {
+                align-self: flex-end;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.overlay {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.overlay_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.5rem;
+}
+
+.overlay_content_btn {
+    border: none;
+    background-color: transparent
+}
+
+.manageNotificationsWrap {
+    // max-width: 950px;
+    width: 100%;
+    margin: 1rem auto 5rem auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 700px) {
+        margin-left: 0;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            font-size: var(--font-size-md);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 0;
+        }
+
+        .unsubscribe {
+            font-size: var(--font-size-md);
+            color: var(--color-blue-yp);
+            text-decoration: underline;
+            cursor: pointer;
+            margin: auto 0;
+
+            @media (max-width: 575px) {
+                font-size: var(--font-size-normal);
+                align-items: center;
+            }
+        }
+    }
+
+    .subscriptionsTypeWrap {
+        display: flex;
+        flex-direction: column;
+
+        .subscriptionType {
+            border-bottom: 1px solid var(--color-border-sub);
+            padding: 1rem 0;
+
+            .title {
+                font-size: var(--font-size-lg);
+                color: var(--color-dark-main);
+                margin-bottom: 0.2rem;
+            }
+
+            .description {
+                width: 50%;
+                font-size: var(--font-size-sm);
+                color: var(--color-dark-sub);
+                margin-bottom: 0;
+
+                @media (max-width: 575px) {
+                    width: 100%;
+                }
+            }
+
+            .subscriptionsWrap {
+                margin-top: 1.5rem;
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                @media (max-width: 575px) {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+
+                .subscription {
+                    width: calc(50% - 0.5rem);
+                    display: flex;
+                    align-items: center;
+
+                    @media (max-width: 575px) {
+                        width: calc(100% - 0.5rem);
+                        gap: 0.5rem;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                    }
+
+                    .textWrap {
+                        .subscriptionTitle {
+                            font-size: var(--font-size-sm);
+                            color: var(--color-dark-main);
+                            margin-bottom: 0;
+                        }
+
+                        .subscriptionDescription {
+                            color: var(--color-dark-sub);
+                            font-size: var(--font-size-xs);
+                            width: calc(100% - 1rem);
+                            margin-bottom: 0;
+
+                            @media (max-width: 575px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .subscriptionType:last-child {
+            border: none;
+        }
+    }
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color-dark-main);
+    background-color: var(--color-light-200);
+    border-radius: 50%;
+    padding: 0.2rem;
+}

@@ -1,0 +1,36 @@
+// styles
+.dropdown {
+    cursor: pointer;
+}
+
+.overlay {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+
+.overlay_item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0.4rem 0;
+    width: 100%;
+}
+
+.disabledButton {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.searchOverlay {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.searchResult {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0.4rem;
+    width: 100%;
+}

@@ -1,0 +1,1 @@
+export type TabType = "assigned_to_me" | "assigned_by_me"

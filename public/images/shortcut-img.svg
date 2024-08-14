@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 233.618 150.9506">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eceef1;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-14, .cls-5, .cls-7, .cls-9 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke: #c1c7d0;
+      }
+
+      .cls-5, .cls-7, .cls-9 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-10, .cls-11, .cls-6 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-7 {
+        stroke: #b3bac5;
+      }
+
+      .cls-8 {
+        fill: #253858;
+      }
+
+      .cls-9 {
+        stroke: #137749;
+        stroke-width: 4px;
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-12 {
+        fill: #137749;
+      }
+
+      .cls-13 {
+        fill: #0065ff;
+      }
+
+      .cls-14 {
+        stroke: #0065ff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 0;
+      }
+
+      .cls-15 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="32.7269" y1="163.8165" x2="200.8911" y2="-4.3477" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#42526e"/>
+      <stop offset="1" stop-color="#5e6c84"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="_Clipping_Path_" data-name="&lt;Clipping Path&gt;" class="cls-1" d="M116.46,23.5937h0A19.7383,19.7383,0,0,0,96.7215,3.8554h-86.5V125.1467h86.5A19.7383,19.7383,0,0,1,116.46,144.885h0Z"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="4376.2038" y1="2867.5981" x2="4427.0425" y2="2867.5981" gradientTransform="translate(5077.5487 1615.5251) rotate(164.6361)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c1c7d0"/>
+      <stop offset="0.0942" stop-color="#c4cad2" stop-opacity="0.9345"/>
+      <stop offset="0.2711" stop-color="#cbd0d8" stop-opacity="0.7616"/>
+      <stop offset="0.5116" stop-color="#d7dbe1" stop-opacity="0.4818"/>
+      <stop offset="0.8037" stop-color="#e8eaee" stop-opacity="0.0999"/>
+      <stop offset="0.876" stop-color="#eceef1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="4424.6904" y1="2867.5981" x2="4475.5291" y2="2867.5981" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <title>Read Me</title>
+  <g class="cls-2">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Software">
+        <g>
+          <path class="cls-3" d="M222.7533,22.0148H10.8646A10.8646,10.8646,0,0,0,0,32.8795v93.71A10.8646,10.8646,0,0,0,10.8646,137.454H94.986a8.3316,8.3316,0,0,1,7.3968,4.78,15.7248,15.7248,0,0,0,28.1539,0,8.3316,8.3316,0,0,1,7.3968-4.78h84.82a10.8646,10.8646,0,0,0,10.8646-10.8646v-93.71A10.8646,10.8646,0,0,0,222.7533,22.0148Z"/>
+          <g>
+            <path id="_Clipping_Path_2" data-name="&lt;Clipping Path&gt;" class="cls-1" d="M116.46,23.5937h0A19.7383,19.7383,0,0,0,96.7215,3.8554h-86.5V125.1467h86.5A19.7383,19.7383,0,0,1,116.46,144.885h0Z"/>
+            <g class="cls-4">
+              <line class="cls-5" x1="21.5989" y1="58.3011" x2="98.6984" y2="58.3011"/>
+              <line class="cls-5" x1="21.5989" y1="66.4883" x2="98.6984" y2="66.4883"/>
+              <line class="cls-5" x1="21.5989" y1="74.6755" x2="98.6984" y2="74.6755"/>
+              <line class="cls-5" x1="21.5989" y1="82.8627" x2="67.1232" y2="82.8627"/>
+              <line class="cls-5" x1="21.5989" y1="99.2371" x2="98.6984" y2="99.2371"/>
+              <line class="cls-5" x1="21.5989" y1="107.4243" x2="98.6984" y2="107.4243"/>
+              <g class="cls-6">
+                <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" class="cls-7" d="M29.0309,48.8057h0A16.3128,16.3128,0,0,1,8.979,37.398L7.23,31.0321a8.4025,8.4025,0,0,1,5.876-10.3284L28.3611,16.512A8.4025,8.4025,0,0,1,38.69,22.388l1.7491,6.3659A16.3128,16.3128,0,0,1,29.0309,48.8057Z"/>
+                <path id="_Compound_Path_2" data-name="&lt;Compound Path&gt;" class="cls-7" d="M75.7848,35.9593h0A16.3128,16.3128,0,0,1,55.7329,24.5515l-1.7491-6.3659A8.4025,8.4025,0,0,1,59.86,7.8572L75.115,3.6655a8.4025,8.4025,0,0,1,10.3284,5.876l1.7491,6.3659A16.3128,16.3128,0,0,1,75.7848,35.9593Z"/>
+                <path class="cls-7" d="M39.3983,24.9675a7.9305,7.9305,0,0,1,15.2942-4.2024"/>
+              </g>
+            </g>
+          </g>
+          <path id="_Clipping_Path_3" data-name="&lt;Clipping Path&gt;" class="cls-8" d="M116.46,23.5937h0A19.7383,19.7383,0,0,1,136.198,3.8554h86.5V125.1467h-86.5A19.7383,19.7383,0,0,0,116.46,144.885h0Z"/>
+          <g>
+            <path id="_Compound_Path_3" data-name="&lt;Compound Path&gt;" class="cls-9" d="M31.3247,47.4426h0A16.3128,16.3128,0,0,1,11.2728,36.0348L9.5236,29.669A8.4025,8.4025,0,0,1,15.4,19.3405l15.2553-4.1917a8.4025,8.4025,0,0,1,10.3284,5.876l1.7491,6.3659A16.3128,16.3128,0,0,1,31.3247,47.4426Z"/>
+            <path class="cls-10" d="M88.294,15.6665c.4894-.415.9753-.873,1.4542-1.353L88.0625,8.1784A8.4026,8.4026,0,0,0,77.734,2.3024L62.4787,6.4941a8.4025,8.4025,0,0,0-5.876,10.3284l1.7491,6.3658A16.2428,16.2428,0,0,0,64.6452,32.17a25.97,25.97,0,0,1,9.8923-10.3846C80.3909,18.4467,83.2782,19.92,88.294,15.6665Z"/>
+            <path class="cls-11" d="M41.54,28.5129c.4894-.415.9753-.873,1.4542-1.353l-1.6857-6.1351A8.4026,8.4026,0,0,0,30.98,15.1489L15.7248,19.3406A8.4025,8.4025,0,0,0,9.8489,29.669l1.7491,6.3658a16.2428,16.2428,0,0,0,6.2933,8.9815,25.97,25.97,0,0,1,9.8923-10.3846C33.637,31.2932,36.5243,32.7666,41.54,28.5129Z"/>
+            <path id="_Compound_Clipping_Path_" data-name="&lt;Compound Clipping Path&gt;" class="cls-9" d="M78.0786,34.5961h0A16.3128,16.3128,0,0,1,58.0266,23.1884l-1.7491-6.3659a8.4025,8.4025,0,0,1,5.876-10.3284L77.4088,2.3024a8.4025,8.4025,0,0,1,10.3284,5.876l1.7491,6.3659A16.3128,16.3128,0,0,1,78.0786,34.5961Z"/>
+            <path class="cls-9" d="M41.6921,23.6044A7.9305,7.9305,0,0,1,56.9863,19.402"/>
+          </g>
+          <circle class="cls-12" cx="165.579" cy="70.4883" r="33.5707"/>
+          <g>
+            <circle class="cls-13" cx="169.579" cy="65.4883" r="33.5707"/>
+            <g>
+              <line class="cls-14" x1="169.579" y1="52.1731" x2="169.579" y2="52.1736"/>
+              <line class="cls-14" x1="156.2641" y1="65.4883" x2="156.2639" y2="65.4883"/>
+              <line class="cls-14" x1="182.8942" y1="65.4883" x2="182.8939" y2="65.4883"/>
+              <path class="cls-15" d="M182.8939,65.4883V62.7331a.7451.7451,0,0,0-.7451-.7451h-9.07V52.9187a.7451.7451,0,0,0-.7451-.7451h-5.51a.7451.7451,0,0,0-.7451.7451V61.988h-9.07a.7451.7451,0,0,0-.7451.7451v5.51a.7451.7451,0,0,0,.7451.7451h9.07v9.07a.7451.7451,0,0,0,.7451.7451h5.51a.7451.7451,0,0,0,.7451-.7451v-9.07h9.07a.7451.7451,0,0,0,.7451-.7451Z"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

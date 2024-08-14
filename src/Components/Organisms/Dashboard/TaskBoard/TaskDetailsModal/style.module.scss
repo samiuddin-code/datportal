@@ -1,0 +1,178 @@
+.taskId {
+    padding: 0rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .selectWrap {
+        border-radius: 1rem;
+    }
+
+}
+
+.modalWrap {
+    color: var(--color-dark-main);
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    .modalLeft {
+        display: flex;
+        width: 65%;
+        flex-direction: column;
+        gap: 2rem;
+
+        .Tasktitle {
+            font-size: var(--font-size-md);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            height: 2.65rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .Tasktitle:hover {
+            background-color: var(--color-light-50);
+            transition: 0.3s;
+        }
+
+        .title {
+            font-size: var(--font-size-normal);
+            padding: 0.25rem 0.5rem;
+        }
+
+        .actionButtonWrap {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+
+            .actionButton {
+                font-size: var(--font-size-sm);
+                font-weight: 500;
+                border-radius: 0.25rem;
+                background-color: var(--color-light);
+                color: var(--color-dark-main);
+                border: none;
+                display: flex;
+                align-items: center;
+                padding: 1rem 0.5rem;
+            }
+
+            .actionButton:hover {
+                background-color: var(--color-light-50);
+            }
+        }
+
+        .descriptionWrap {
+            border-radius: 0.25rem;
+            position: relative;
+
+            .instructions {
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                background-color: var(--color-light);
+                min-height: 9.25rem;
+            }
+
+            .instructions:hover {
+                background-color: var(--color-light-50);
+                transition: 0.3s;
+            }
+
+        }
+
+        .attachmentsWrap {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .resourceWrap {
+                box-shadow: 0px 1px 1px #091E4240, 0px 0px 1px #091E424F;
+                border-radius: 0.25rem;
+                position: relative;
+
+                .deleteWrap {
+                    position: absolute;
+                    right: 0.375rem;
+                    top: 0.375rem;
+                    padding: 0rem 0.25rem;
+                    background-color: #bf0000;
+                    border-radius: 0.25rem;
+                    cursor: pointer;
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    .deleteWrap {
+                        visibility: unset;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.modalRight {
+    width: 35%;
+    margin-top: 2rem;
+
+    .status {
+        display: flex;
+        margin-bottom: 0.5rem;
+
+        .selectWrap {
+            span {
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+
+    .rightTop {
+        padding: 0.5rem;
+        border-top: 1px solid var(--color-light-100);
+        border-left: 1px solid var(--color-light-100);
+        border-right: 1px solid var(--color-light-100);
+        // background-color: var(--color-light-50);
+        line-height: 1.5rem;
+
+        border-radius: 0.25rem 0.25rem 0 0;
+        font-size: var(--font-size-normal);
+    }
+
+    .rightBottom {
+        padding: 0.5rem;
+        border-radius: 0 0 0.25rem 0.25rem;
+        border: 1px solid var(--color-light-100);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+
+        .row {
+            display: flex;
+            // gap: 1rem;
+            align-items: center;
+
+            .rowTitle {
+                font-size: var(--font-size-sm);
+                width: 25%;
+            }
+
+            .rowValue {
+                width: 75%;
+                font-size: var(--font-size-sm);
+                padding: 0.25rem;
+            }
+
+            .editableRowValue:hover {
+                background-color: var(--color-light-50);
+                transition: 0.3s;
+                border-radius: 0.25rem;
+            }
+
+        }
+    }
+}

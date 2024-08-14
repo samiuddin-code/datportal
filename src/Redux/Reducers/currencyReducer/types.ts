@@ -1,0 +1,7 @@
+// action constants
+
+export const SET_CURRENCY_DATA = "SET_CURRENCY_DATA";
+export const ADD_CURRENCY_DATA = "ADD_CURRENCY_DATA";
+export const SET_CURRENCYDROPDOWN_DATA = "SET_CURRENCYDROPDOWN_DATA";
+
+// types

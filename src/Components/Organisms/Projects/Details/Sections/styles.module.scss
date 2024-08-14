@@ -1,0 +1,238 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    overflow: visible;
+    height: auto;
+  }
+}
+
+.chat {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.chat_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-main-800);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main {
+  display: flex;
+  width: calc(100% - 400px);
+  flex-direction: column;
+  overflow-y: auto;
+
+  // style the scrollbar
+  &::-webkit-scrollbar {
+    width: 7px;
+    background: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: var(--color-dark-sub) !important;
+    border: 3px solid var(--color-dark-sub) !important;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+.main_body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main_body_title_wrap {
+  height: 3rem;
+  font-weight: 600;
+}
+
+.main_body_title {
+  padding: 0.45rem 0;
+  border-radius: 0.25rem;
+  font-weight: var(--font-weight-bold);
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: var(--color-inactive);
+    cursor: text;
+  }
+}
+
+.main_body_instructions_wrap {
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark-main);
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: #EDEDED;
+    cursor: text;
+  }
+}
+
+.main_body_instructions {
+  padding: 0.35rem;
+  font-size: var(--font-size-normal);
+  white-space: pre-line;
+  color: var(--color-dark-800);
+}
+
+.main_body_stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main_body_stats_card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--color-light-900);
+  color: var(--color-dark-main);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border: 1px solid #F2F2F2;
+  min-width: 170px;
+  width: 100%;
+  height: 120px;
+
+  &:hover {
+    background-color: #EDEDED;
+  }
+
+  @media (max-width: 1280px) {
+    min-width: 150px;
+  }
+}
+
+.main_body_stats_card_title {
+  font-size: var(--font-size-sm);
+
+  @media (max-width: 1600px) {
+    font-size: var(--font-size-xs);
+  }
+}
+
+.main_body_stats_card_value {
+  margin-top: 5px;
+  font-size: var(--font-size-md);
+}
+
+.main_body_stats_progress {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 1.7rem);
+}
+
+.main_body_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: #E0E0E0;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  overflow: auto;
+
+  >div {
+    height: 100%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    height: auto;
+
+    >div {
+      min-height: 200px;
+      height: auto
+    }
+  }
+}
+
+.main__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main__header__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main__header__priority {
+  font-size: var(--font-size-sm);
+  border-radius: 30px;
+}
+
+.main_header_dropdowns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main_header_dropdowns_icon {
+  display: flex;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #E0E0E0;
+  }
+}

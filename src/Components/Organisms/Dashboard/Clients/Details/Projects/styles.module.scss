@@ -1,0 +1,16 @@
+.badge {
+    background-color: var(--color-light);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-dark-main);
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+.actionButtons {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,65 @@
+.user_popover {
+    display: flex;
+    gap: 1rem;
+}
+
+.user_popover_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-active);
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.user_popover_content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user_popover_content_name {
+    font-size: var(--font-size-md);
+    margin-bottom: 0;
+    padding-bottom: 0.6rem;
+    color: var(--color-dark-main);
+}
+
+.user_popover_content_email {
+    font-size: var(--font-size-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-dark-main);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--color-primary-main-700);
+    }
+}
+
+.user_popover_content_phone {
+    font-size: var(--font-size-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-dark-main);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--color-primary-main-700);
+    }
+}
+
+.user_popover_content_extra {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selectable_dropdown {
+    padding: 0 !important;
+}

@@ -1,0 +1,146 @@
+.divider {
+    width: 1px;
+    height: 100%;
+    background-color: #E0E0E0;
+    margin: 0.25rem 0;
+}
+
+.notes {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.notes_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.9rem;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.note {
+    display: grid;
+    grid-template-columns: minmax(0, 40px) minmax(0, auto);
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    padding: 0.2rem;
+    color: var(--color-dark-main);
+
+    &:hover {
+        box-shadow: 1px 1px var(--color-light-200);
+    }
+}
+
+.note_user_avatar {
+    border-radius: 50%;
+}
+
+.note_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.2rem;
+}
+
+.note_header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.note_header_date {
+    font-size: var(--font-size-xs);
+    margin-bottom: 0;
+    color: var(--color-dark-sub);
+}
+
+.note_header_delete {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    color: var(--color-red-yp);
+}
+
+.note_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--color-dark-main);
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+}
+
+.notes_form_input_wrapper {
+    position: relative;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.notes_form_avatar {
+    position: absolute;
+    left: 0;
+    margin-left: 0.2rem;
+    z-index: 1;
+}
+
+.notes_form_input {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-sm);
+    padding: 0.5rem 2rem 0.5rem 2.5rem;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: var(--font-size-sm);
+
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.notes_form_send_loader {
+    position: absolute;
+    right: 0;
+    margin-right: 0.5rem;
+    border-radius: 6px;
+}
+
+.notes_form_send {
+    position: absolute;
+    right: 0;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    gap: 0.5rem;
+    border-radius: 50%;
+    padding: 0.05rem;
+}
+
+.date_picker {
+    width: 100%;
+    border: 2px solid var(--color-border-sub);
+    border-radius: 5px;
+}
+
+.z_index {
+    z-index: 10000
+}
+
+.date_footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+    padding: 10px;
+}

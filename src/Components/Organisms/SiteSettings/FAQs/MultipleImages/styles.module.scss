@@ -1,0 +1,88 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 0.5rem;
+
+    &>.formItems {
+        padding-inline-end: 1rem;
+        overflow: auto;
+        padding-inline-start: 1px;
+        padding-bottom: 1rem;
+
+        @media(max-width:575px) {
+            padding-inline-end: 0px;
+        }
+
+        &>p {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline-end: 1rem;
+
+    @media(max-width:575px) {
+        padding-inline-end: 0px;
+    }
+}
+
+.dragger {
+    height: 10rem;
+    border: 2px dashed var(--color-primary-main);
+    position: relative;
+    margin-bottom: 10px;
+
+    .numberOfUploads {
+        position: absolute;
+        bottom: -20px;
+        font-size: var(--font-size-xs);
+    }
+}
+
+.uploadedImages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0px;
+}
+
+.imageWrap {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-inactive);
+    border-radius: 5px;
+    height: 120px;
+    justify-content: space-between;
+
+    &>img {
+        height: 60px;
+        border-radius: 5px 5px 0px 0px;
+        object-fit: contain;
+        max-width: 100%;
+    }
+
+    &>span {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &>button {
+            border-radius: 5px;
+            background-color: var(--color-red-yp);
+            color: var(--color-light);
+            height: 20px;
+            padding: 0px .5rem;
+            font-size: var(--font-size-xxs);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
