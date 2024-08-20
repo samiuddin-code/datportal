@@ -277,16 +277,14 @@ const QuotationDrawer: FC<QuotationDrawerProps> = (props) => {
             hasSupervision: data?.hasSupervision,
             supervisionMonthlyCharge: data?.supervisionMonthlyCharge,
             supervisionPaymentSchedule: data?.supervisionPaymentSchedule,
-            paymentTerms: data?.paymentTerms,
+            paymentTerms: Array.isArray(data?.paymentTerms) ? data.paymentTerms.join(', ') : data?.paymentTerms,
             type: data?.type,
             quoteNumber: data?.quoteNumber,
-            expiryDate: (data?.expiryDate) ? moment(data?.expiryDate) : undefined,
-            issueDate: (data?.issueDate) ? moment(data?.issueDate) : undefined,
-          })
-
-          setChecked(data?.hasSupervision);
-          onCalculateTotal();
+            expiryDate: data?.expiryDate ? moment(data.expiryDate) : undefined,
+            issueDate: data?.issueDate ? moment(data.issueDate) : undefined,
+          });
         }
+        
       })
     }
   }, [quoteId, type])

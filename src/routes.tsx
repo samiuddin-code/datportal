@@ -1,5 +1,7 @@
 import PublicHoliday from "@organisms/Dashboard/PublicHoliday";
 import WorkingHours from "@organisms/SiteSettings/WorkingHours";
+import DiaryDetail from "Components/Notepad/Notepad";
+
 import { lazy } from "react";
 
 // Loading FallBack Component
@@ -126,7 +128,10 @@ export const routes = [
 	{ path: "/fallback", element: <Fallback /> },
 	{ path: "/login", element: <LoginTemplate /> },
 	{ path: "/resources/*", element: <ResourcesViewer /> },
-	{ path: "/reset-password/:token", element: <ResetPassword /> },
+	{ path: "/reset-password/:token", element: <ResetPassword /> },      
+	
+	{ path:"/diary/:id", element:<DiaryDetail	 />},
+
 	/** =====Agent Dashboard Start===== */
 	{ path: "/", element: <DashboardOverview /> },
 	{ path: "/employees", element: <Employees /> },

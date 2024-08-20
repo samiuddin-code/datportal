@@ -3,7 +3,7 @@ import { Skeleton } from "antd"
 export const TaskSkeleton = () => {
     return (
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-            <div style={{ width: '65%' }}>
+            <div style={{ width: '25%' }}>
                 <Skeleton active round paragraph={{ rows: 0 }} style={{ width: 400 }} />
                 <Skeleton.Input active style={{ width: 600 }} />
                 <Skeleton active round paragraph={{ rows: 4 }} style={{ width: '100%', marginTop: '3rem' }} />

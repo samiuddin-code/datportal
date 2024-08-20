@@ -7,6 +7,12 @@
 
     .selectWrap {
         border-radius: 1rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 2.25rem;
+        height: 2.65rem;
+        display: flex;
+        align-items: center;
+        font-size: var(--font-size-md);
     }
 
 }
@@ -14,74 +20,109 @@
 .modalWrap {
     color: var(--color-dark-main);
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
 
     .modalLeft {
         display: flex;
-        width: 65%;
+        width: 60%;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 2.25rem;
+        height: 2.65rem;
+        display: flex;
+    
+        font-size: var(--font-size-md);
 
         .Tasktitle {
             font-size: var(--font-size-md);
             padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
+            border-radius: 2.25rem;
             height: 2.65rem;
             display: flex;
             align-items: center;
+            border-radius: 8px; /* Rounded corners */
+            border: 1px solid #dcdcdc; /* Border color */
+            padding: 8px 12px; /* Padding */
+            outline: none; /* Remove default outline */
+            width: 100%; /* Full width */
+            box-sizing: border-box
+            
         }
 
         .Tasktitle:hover {
             background-color: var(--color-light-50);
             transition: 0.3s;
+            
         }
 
         .title {
-            font-size: var(--font-size-normal);
+            font-size: var(--font-size-md);
             padding: 0.25rem 0.5rem;
+            
+            
         }
+        .roundedInput {
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #dcdcdc; /* Border color */
+  padding: 8px 12px; /* Padding */
+  outline: none; /* Remove default outline */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in width */
+}
+
 
         .actionButtonWrap {
             display: flex;
             gap: 1rem;
-            margin-top: 0.5rem;
+            margin-top: 0rem;
+            justify-items: center;
+            align-items: end;
+            
 
             .actionButton {
                 font-size: var(--font-size-sm);
                 font-weight: 500;
-                border-radius: 0.25rem;
+                border-radius: 1.25rem;
                 background-color: var(--color-light);
                 color: var(--color-dark-main);
-                border: none;
+                border:solid 1px;
                 display: flex;
                 align-items: center;
-                padding: 1rem 0.5rem;
+                padding: 1rem 2.0rem;
+                
             }
 
             .actionButton:hover {
-                background-color: var(--color-light-50);
+                background-color: var(--color-light-100);
             }
         }
 
-        .descriptionWrap {
-            border-radius: 0.25rem;
-            position: relative;
+        
+//
 
-            .instructions {
-                padding: 0.25rem 0.5rem;
-                border-radius: 0.25rem;
-                background-color: var(--color-light);
-                min-height: 9.25rem;
-            }
+.instructions {
+    padding: 0.75rem 2rem; /* More padding for better spacing */
+    border-radius: 0.5rem; /* Rounded corners */
+    background-color: var(--color-light);
+    min-height: 20rem; /* Increased minimum height */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+}
 
-            .instructions:hover {
-                background-color: var(--color-light-50);
-                transition: 0.3s;
-            }
+.instructions:hover {
+    background-color: var(--color-light-50);
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
 
-        }
+.instructions:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px var(--color-primary); /* Add a custom focus ring */
+}
 
+//
         .attachmentsWrap {
             display: flex;
             gap: 1rem;
@@ -115,16 +156,18 @@
 }
 
 .modalRight {
-    width: 35%;
-    margin-top: 2rem;
+    width: 45%;
+    margin-top: 4rem;
 
     .status {
         display: flex;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
+        
 
         .selectWrap {
             span {
-                font-weight: bold;
+                font-weight: bold
+;
                 color: #fff;
             }
         }
@@ -141,6 +184,14 @@
         border-radius: 0.25rem 0.25rem 0 0;
         font-size: var(--font-size-normal);
     }
+    .updateStatusTitle {
+        font-size: var(--font-size-md); /* or any specific size */
+        font-weight: bold;
+        color: var(--text-color-primary); /* or any color that fits your theme */
+        margin-bottom: 10px; /* spacing below the title */
+        
+      }
+      
 
     .rightBottom {
         padding: 0.5rem;

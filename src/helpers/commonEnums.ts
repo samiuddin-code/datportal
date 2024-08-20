@@ -234,6 +234,17 @@ export const taskColumnLabelsColors = {
 	2: "#42526e",
 	3: "#137749",
 };
+export const techSupportColumnLabelss: { [key: number]: string } = {
+  1: 'Label 1',
+  2: 'Label 2',
+  3: 'Label 3',
+};
+
+export const taskColumnLabelsColorss: { [key: number]: string } = {
+  1: 'Color 1',
+  2: 'Color 2',
+  3: 'Color 3',
+};
 
 export const taskPriority = {
 	1: { title: "High", color: "#bf0000" },

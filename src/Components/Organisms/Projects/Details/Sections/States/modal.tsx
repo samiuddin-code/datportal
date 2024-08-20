@@ -177,37 +177,37 @@ export const ProjectStateModal = (props: ProjectStateModalProps) => {
     }
   };
   
-//   const columns = [
-//     {
-//       title: 'ID',
-//       dataIndex: 'id',
-//       key: 'id',
-//     },
-//     {
-//       title: 'Project Title',
-//       dataIndex: 'pId',
-//       key: 'pId',
-//       render: (pId: number) => projectsMap.get(pId) || pId,
-//     },
-//     {
-//       title: 'Project State Title',
-//       dataIndex: 'pstateId',
-//       key: 'pstateId',
-//       render: (pstateId: number) => projectStatesMap.get(pstateId) || pstateId,
-//     },
-//     {
-//       title: 'Is Published',
-//       dataIndex: 'isPublished',
-//       key: 'isPublished',
-//       render: (text: boolean) => (text ? 'Yes' : 'No'),
-//     },
-//     {
-//       title: 'Is Deleted',
-//       dataIndex: 'isDeleted',
-//       key: 'isDeleted',
-//       render: (text: boolean) => (text ? 'Yes' : 'No'),
-//     },
-//   ];
+  const columns = [
+    {
+      title: 'ID',
+      dataIndex: 'id',
+      key: 'id',
+    },
+    {
+      title: 'Project Title',
+      dataIndex: 'pId',
+      key: 'pId',
+      render: (pId: number) => projectsMap.get(pId) || pId,
+    },
+    {
+      title: 'Project State Title',
+      dataIndex: 'pstateId',
+      key: 'pstateId',
+      render: (pstateId: number) => projectStatesMap.get(pstateId) || pstateId,
+    },
+    {
+      title: 'Is Published',
+      dataIndex: 'isPublished',
+      key: 'isPublished',
+      render: (text: boolean) => (text ? 'Yes' : 'No'),
+    },
+    {
+      title: 'Is Deleted',
+      dataIndex: 'isDeleted',
+      key: 'isDeleted',
+      render: (text: boolean) => (text ? 'Yes' : 'No'),
+    },
+  ];
 
   return (
     <CustomModal

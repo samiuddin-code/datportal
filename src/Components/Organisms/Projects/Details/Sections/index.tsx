@@ -27,6 +27,7 @@ import ProjectGovernmentFees from './Transactions';
 import { QueryType } from '@modules/Common/common.interface';
 import { formatCurrency, handleError } from '@helpers/common';
 import { XMarkIcon } from '@icons/x-mark';
+import NotePad from 'Components/Notepad/Notepad';
 
 type DataTypes<T = any> = {
   data: T
@@ -60,7 +61,7 @@ type IsUpdateTypes = {
   instructions: { value: string; show: boolean }
 }
 
-type SidebarTabs = 'details' | 'files' | 'reports'
+type SidebarTabs = 'details' | 'files' | 'reports' | 'notepad'
 
 const FinanceReportLabel = {
   projectEstimate: 'Project Estimate',
@@ -479,6 +480,11 @@ const AllSections: FC<AllSectionsProps> = (props) => {
               label: "Reports",
               key: 'reports',
               children: <ReportTab projectId={project?.data?.id} />,
+            },
+            {
+              label: "Notes",
+              key: 'notepad',
+              children: <NotePad />,
             },
           ]}
         />

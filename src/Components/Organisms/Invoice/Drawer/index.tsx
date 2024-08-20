@@ -590,7 +590,7 @@ const InvoiceDrawer: FC<InvoiceDrawerProps> = (props) => {
                           onGetQuotations(value)
                           // reset the quotation id
                           form.setFieldsValue({ quotationId: undefined })
-                          // reset the quotation milestones
+                          // reset the lestones
                           setQuotationMilestone([])
                           // remove the invoice items that was added from the quotation milestones
                           setSelectedMilestones((prev) => ({ ...prev, ids: [] }))

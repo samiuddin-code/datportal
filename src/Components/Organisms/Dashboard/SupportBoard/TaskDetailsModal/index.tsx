@@ -18,7 +18,7 @@ import {
 } from "@helpers/constants";
 import { convertDate } from "@helpers/dateHandler";
 import {
-  taskColumnLabels, taskColumnLabelsColors, techSupportColumnLabels
+  taskColumnLabels, taskColumnLabelsColors, taskPriority, techSupportColumnLabels
 } from "@helpers/commonEnums";
 import EditableInput from "@atoms/EditableInput";
 import { TaskSkeleton } from "./TaskSkeleton";
@@ -31,6 +31,8 @@ import { XMarkIcon } from "@icons/";
 import { UserModule } from "@modules/User";
 import { useDebounce } from "@helpers/useDebounce";
 import EditableTextarea from "@atoms/EditableTextarea";
+import EditableDatePicker from "@atoms/EditableDatePicker";
+import moment from "moment";
 const { Text } = Typography;
 
 interface TaskDetailsModalProps {
@@ -349,7 +351,7 @@ export const TaskDetailsModal = (props: TaskDetailsModalProps) => {
 
               <div onBlur={() => setIsUpdate({ ...isUpdate, instructions: { ...isUpdate.instructions, show: false } })}
                 className={styles.descriptionWrap}>
-                <div className={styles.title}><b>Description</b></div>
+                <div className={styles.title}><b>Descriptionnnnn</b></div>
                 {isUpdate.instructions.show ?
                   <EditableTextarea
                     onBlur={() => setIsUpdate({ ...isUpdate, taskTitle: { ...isUpdate.taskTitle, show: false } })}
@@ -470,7 +472,7 @@ export const TaskDetailsModal = (props: TaskDetailsModalProps) => {
               <div className={styles.rightBottom}>
                 <div className={styles.row}>
                   <div className={styles.rowTitle}>
-                    <b>Assignees</b>
+                    <b>Assigned By</b>
                   </div>
 
                   <div className={styles.rowValue} style={{ display: 'flex', gap: '0.5rem', flexDirection: 'column' }}>
@@ -563,7 +565,7 @@ export const TaskDetailsModal = (props: TaskDetailsModalProps) => {
                   </div>
                 </div>
 
-                {/* <div className={styles.row}>
+                <div className={styles.row}>
                                     <div className={styles.rowTitle}><b>Start date</b></div>
                                     <div className={styles.rowValue}>
                                         {convertDate(data?.taskStartFrom || "", "MM dd,yy")}
@@ -593,20 +595,20 @@ export const TaskDetailsModal = (props: TaskDetailsModalProps) => {
                                             onClick={() => setIsUpdate({ ...isUpdate, taskEndOn: { ...isUpdate.taskEndOn, show: true } })}>
                                             {convertDate(data?.taskEndOn || "", "MM dd,yy")}
                                         </div>}
-                                </div> */}
+                                </div> 
 
-                {/* <div className={styles.row}>
+                <div className={styles.row}>
                                     <div className={styles.rowTitle}><b>Project title</b></div>
                                     <div className={styles.rowValue}>
                                         {data?.Project.title}
                                     </div>
-                                </div> */}
-                {/* <div className={styles.row}>
+                                </div> 
+               <div className={styles.row}>
                                     <div className={styles.rowTitle}><b>Project ID</b></div>
-                                    <div className={styles.rowValue}>
+                                    {/* <div className={styles.rowValue}>
                                         DAT-{data?.Project.quoteNumber}
-                                    </div>
-                                </div> */}
+                                    </div> */}
+                                </div>
               </div>
             </div>
 

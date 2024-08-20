@@ -20,6 +20,7 @@ import { NewProjectModalTypes } from "../status"
 type PermissionsType = { [key in QuotationPermissionsEnum]: boolean }
 
 export interface QuotationDrawerProps {
+  
   /** The drawer state */
   drawer: QuotationDrawerTypes
   /** The function to set the drawer state */

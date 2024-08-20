@@ -11,7 +11,22 @@
     flex-direction: column;
     width: 100%;
 }
-
+.textBox {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    /* Add vertical and horizontal positioning */
+  }
+  
+  .chartContainer {
+    position: relative;
+  }
+  
 .info_item {
     display: flex;
     flex-direction: row;

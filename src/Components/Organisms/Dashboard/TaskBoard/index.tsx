@@ -1,5 +1,7 @@
 import { useState, ChangeEvent, useEffect, FC } from "react";
 import { message, Input, Button, Avatar, Tooltip } from "antd";
+import { Select } from "antd";
+
 import {
   SearchOutlined, DatabaseOutlined, TableOutlined, UserOutlined
 } from "@ant-design/icons";
@@ -114,21 +116,27 @@ const TaskBoard = () => {
         const statuses = [1, 2, 3];
         const requests = statuses.map(status => taskModule.getAllRecords({ status, ...query }));
         const results = await Promise.allSettled(requests);
-
+  
         const tasks: TaskType[] = [];
         const meta: Array<APIResponseObject["meta"]> = Array(3).fill({});
-
+  
         results.forEach((result, index) => {
           if (result.status === 'fulfilled') {
             tasks.push(...result.value.data.data);
             meta[index] = result.value.data.meta;
           }
         });
-
+  
         setTasks(tasks);
         setMeta(meta);
       } else if (taskView === "table") {
-        const res = await taskModule.getAllRecords({ page: tableMeta?.page, perPage: tableMeta?.perPage, ...query, ...taskFilters });
+        const res = await taskModule.getAllRecords({
+          page: tableMeta?.page,
+          perPage: tableMeta?.perPage,
+          ...query,
+          ...taskFilters,
+          addedBy: taskFilters.addedBy // Ensure this is included for "Assigned By Me" filter
+        });
         setTasks([...res.data.data]);
         setTableMeta(res.data.meta);
       }
@@ -137,7 +145,9 @@ const TaskBoard = () => {
     } finally {
       setIsLoading(false);
     }
-  }
+  };
+  
+  
 
   useEffect(() => {
     if (isFirstRender) {
@@ -186,7 +196,10 @@ const TaskBoard = () => {
     "board": KanbanBoard,
     "table": TaskTable
   };
-
+  useEffect(() => {
+    fetchData({ ...taskFilters });
+  }, [taskFilters]);  
+  
   const ViewComponent = componentMap[taskView];
 
   return (
@@ -198,22 +211,22 @@ const TaskBoard = () => {
         buttonText="Add New Task"
         onButtonClick={() => setOpenTaskModal(!openTaskModal)}
         filters={
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
             <Input
               allowClear
               value={searchTerm || ""}
               placeholder="Search this board"
               onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                setSearchTerm(event?.target?.value);
-                if (event.target.value) {
-                  searchParams.set("searchTerm", event?.target?.value.toLowerCase())
-                  setSearchParams(searchParams);
+                const value = event?.target?.value;
+                setSearchTerm(value);
+                if (value) {
+                  searchParams.set("searchTerm", value.toLowerCase());
                 } else {
                   searchParams.delete("searchTerm");
-                  setSearchParams(searchParams);
                 }
+                setSearchParams(searchParams);
               }}
-              style={{ width: 220, borderRadius: '0.25rem' }}
+              style={{ width: 220, borderRadius: '0.25rem', marginRight: '16px' }}
               suffix={<SearchOutlined />}
             />
             <CustomFilter
@@ -240,30 +253,68 @@ const TaskBoard = () => {
                   ...taskFilter,
                   projectId: taskFilters.projectId,
                 });
-                if (taskFilters?.projectId) searchParams.set("projectId", taskFilters?.projectId?.toString())
+                if (taskFilters?.projectId) searchParams.set("projectId", taskFilters?.projectId?.toString());
                 setSearchParams(searchParams);
               }}
-              // START: For search
               loading={projectOptions.loading}
               searchTerm={searchTermProject}
               onSearch={(event) => setSearchTermProject(event.currentTarget.value)}
-            // END: For search
             />
-            <div
-              style={{
-                backgroundColor: taskFilters.type ? "var(--color-dark-main)" : undefined,
-                color: taskFilters.type ? "var(--color-inactive)" : undefined
-              }}
-              className={styles.onlyMyTask}
-              onClick={() => {
-                setTaskFilters({
-                  ...taskFilters,
-                  type: taskFilters.type ? undefined : 'myTask'
-                })
-              }}
-            >
-              Only My Tasks
-            </div>
+    <Select
+  value={taskFilters.type || ""}
+  style={{ width: 180, marginRight: '16px' }}
+  onChange={(value) => {
+    const validValues: ("myTask" | "assignedTask" | "assignedTask" | undefined)[] = ["myTask", "assignedTask", "assignedTask", undefined];
+    const filterValue = validValues.includes(value as "myTask" | "assignedTask" | "assignedTask") ? value as "myTask" | "assignedTask" | "assignedTask" : undefined;
+
+    const updatedSearchParams = new URLSearchParams(searchParams);
+    if (filterValue) {
+      updatedSearchParams.set("type", filterValue);
+    } else {
+      updatedSearchParams.delete("type");
+    }
+    setSearchParams(updatedSearchParams.toString());
+
+    setTaskFilters(prevFilters => {
+      const updatedFilters = { ...prevFilters, type: filterValue };
+      fetchData(updatedFilters);  // Ensure fetchData is called with updated filters
+      return updatedFilters;
+    });
+  }}
+>
+  <Select.Option
+    value="myTask"
+    style={{
+      backgroundColor: taskFilters.type === 'myTask' ? "var(--color-dark-main)" : undefined,
+      color: taskFilters.type === 'myTask' ? "var(--color-inactive)" : undefined,
+    }}
+  >
+    Assigned For Me
+  </Select.Option>
+  <Select.Option
+    value="assignedTask"
+    style={{
+      backgroundColor: taskFilters.type === 'assignedTask' ? "var(--color-dark-main)" : undefined,
+      color: taskFilters.type === 'assignedTask' ? "var(--color-inactive)" : undefined,
+    }}
+  >
+    Assigned By Me
+  </Select.Option>
+  <Select.Option
+    value="" // This represents "All Tasks"
+    style={{
+      backgroundColor: !taskFilters.type ? "var(--color-dark-main)" : undefined,
+      color: !taskFilters.type ? "var(--color-inactive)" : undefined,
+    }}
+  >
+    All Tasks
+  </Select.Option>
+</Select>
+
+
+
+
+
 
             <div>
               <Avatar.Group maxCount={5}>
@@ -271,17 +322,18 @@ const TaskBoard = () => {
                   <Tooltip
                     overlayInnerStyle={{ borderRadius: '0.25rem', fontSize: 'var(--font-size-sm)' }}
                     key={member.User.uuid}
-                    title={member.User.firstName + " " + member.User.lastName}>
+                    title={`${member.User.firstName} ${member.User.lastName}`}
+                  >
                     <Avatar
                       size={32}
                       onClick={() => {
-                        let userIds = taskFilters.userIds;
-                        if (!userIds?.some(user => user === member.User.id)) {
-                          userIds?.push(member.User.id);
+                        let userIds = taskFilters.userIds || [];
+                        if (!userIds.includes(member.User.id)) {
+                          userIds.push(member.User.id);
                         } else {
-                          userIds = userIds?.filter(item => item !== member.User.id);
+                          userIds = userIds.filter(id => id !== member.User.id);
                         }
-                        if (userIds?.length) {
+                        if (userIds.length) {
                           searchParams.set("userIds", JSON.stringify(userIds));
                         } else {
                           searchParams.delete("userIds");
@@ -291,8 +343,10 @@ const TaskBoard = () => {
                         setTaskFilters({ ...taskFilters, userIds });
                       }}
                       style={{
-                        border: taskFilters.userIds?.includes(member.User.id) ? '2px solid var(--color-primary-main)' : '0.5px solid var(--color-light-200)'
-                        , cursor: 'pointer'
+                        border: taskFilters.userIds?.includes(member.User.id)
+                          ? '2px solid var(--color-primary-main)'
+                          : '0.5px solid var(--color-light-200)',
+                        cursor: 'pointer'
                       }}
                       src={RESOURCE_BASE_URL + member.User.profile}
                       icon={<UserOutlined />}
@@ -301,7 +355,6 @@ const TaskBoard = () => {
                 ))}
               </Avatar.Group>
             </div>
-
             <div className={styles.sortBy}>
               <CustomFilter
                 type="radio"
@@ -322,14 +375,18 @@ const TaskBoard = () => {
                   fetchData({
                     ...taskFilter,
                     sortByField: taskFilters.sortByField,
-                    sortOrder: taskFilter.sortOrder
+                    sortOrder: taskFilter.sortOrder,
                   });
                 }}
                 withSort
               />
               <div>
-                {taskView === "table" && <Button onClick={() => setTaskView("board")} icon={<DatabaseOutlined style={{ fontSize: 20 }} />} />}
-                {taskView === "board" && <Button onClick={() => setTaskView("table")} icon={<TableOutlined style={{ fontSize: 20 }} />} />}
+                {taskView === "table" && (
+                  <Button onClick={() => setTaskView("board")} icon={<DatabaseOutlined style={{ fontSize: 20 }} />} />
+                )}
+                {taskView === "board" && (
+                  <Button onClick={() => setTaskView("table")} icon={<TableOutlined style={{ fontSize: 20 }} />} />
+                )}
               </div>
             </div>
           </div>

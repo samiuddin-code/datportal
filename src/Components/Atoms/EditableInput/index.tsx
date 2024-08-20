@@ -4,26 +4,31 @@ import { CloseOutlined, CheckOutlined } from "@ant-design/icons";
 import styles from "./style.module.scss";
 
 interface EditableInputProps extends InputProps {
-  onBlur: FocusEventHandler<HTMLDivElement>
-  onMouseDown: MouseEventHandler<any>;
+  defaultValue: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: () => void;
+  onMouseDown?: MouseEventHandler<HTMLElement>;
+  autoFocus?: boolean;
 }
 
 const EditableInput: FC<EditableInputProps> = (props) => {
-  const { onBlur, onChange, onMouseDown, defaultValue, ...rest } = props
+  const { onBlur, onChange, onMouseDown, defaultValue, autoFocus = false, ...rest } = props;
 
   return (
-    <div onBlur={onBlur} className={styles.updateTitle}>
+    <div className={styles.updateTitle}>
       <Input
         bordered={false}
         defaultValue={defaultValue}
         onChange={onChange}
+        onBlur={onBlur}
         size="large"
-        autoFocus
+        autoFocus={autoFocus}
         {...rest}
       />
       <div className={styles.buttonWrap}>
         <Button
-          type="default" onMouseDown={onMouseDown}
+          type="default"
+          onMouseDown={onMouseDown}
           icon={<CheckOutlined style={{ fontSize: 10 }} />}
         />
         <Button
@@ -32,7 +37,7 @@ const EditableInput: FC<EditableInputProps> = (props) => {
         />
       </div>
     </div>
-  )
+  );
 }
 
 export default EditableInput;

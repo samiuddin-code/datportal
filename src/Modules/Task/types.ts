@@ -25,7 +25,7 @@ export interface TaskDetailType {
     uuid: string;
     projectId: number;
     title: string;
-    priority: number;
+    priority: String;
     order: number;
     instructions: string;
     taskStartFrom: string;
@@ -56,16 +56,25 @@ export interface Resource {
     addedDate: Date;
 }
 
+
 export type TaskQuery = {
     projectId?: number;
     status?: number;
     userIds?: number[];
-    type?: "myTask" | "assignedTask",
+    addedBy?: number; 
+    assignedTask?: string | null;
+    
+
+    
+    
+   
     taskType?: 1 | 2;
     sortByField?: string;
     sortOrder?: string;
     perPage?: number;
     page?: number;
+    
+    type?: 'myTask' | 'assignedTask' | 'assignedTask';
 }
 
 export interface Count {

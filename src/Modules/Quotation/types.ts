@@ -1,7 +1,8 @@
+// src/types/QuotationTypes.ts
+
 import { LeadsTypes } from "@modules/Leads/types";
 import { APIResponseObject, TypeFromEnumValues } from "../Common/common.interface";
 import { QuotationStatus } from "@helpers/commonEnums";
-import { Moment } from "moment";
 
 export type QuotationTypes = {
     id: number;
@@ -20,7 +21,7 @@ export type QuotationTypes = {
     hasSupervision: boolean;
     supervisionMonthlyCharge: number;
     supervisionPaymentSchedule: number;
-    paymentTerms: string;
+    
     QuotationMilestone: QuotationMilestone[];
     Lead: LeadsTypes;
     projectId: number;
@@ -35,6 +36,7 @@ export type QuotationTypes = {
     clientId: number;
     issueDate: string;
     expiryDate: string;
+    paymentTerms: string[]; 
 };
 
 export type QuotationMilestone = {
@@ -46,27 +48,30 @@ export type QuotationMilestone = {
     status: number;
     type?: "supervision" | "milestone";
     quantity?: number;
+    description?: string;
+    paymentTerms?: string;
 }
 
 export type QuotationFormType = {
-    leadId: number
-    revisedQuotationReferenceId: number
-    totalAmount: number
-    hasSupervision: boolean
-    supervisionMonthlyCharge: number
-    supervisionPaymentSchedule: number
-    scopeOfWork: string
-    paymentTerms: string
-    milestone: { title: string; amount: number }[]
-    type: number
-    file: any
+    leadId: number;
+    revisedQuotationReferenceId: number;
+    totalAmount: number;
+    hasSupervision: boolean;
+    supervisionMonthlyCharge: number;
+    supervisionPaymentSchedule: number;
+    scopeOfWork: string;
+    paymentTerms: string;
+    milestone: { title: string; amount: number }[];
+    type: number;
+    file: any;
 }
+
 
 export type QuotationParams = {
     projectId: number;
     clientId: number;
     projectTypeId: number;
-    __status: TypeFromEnumValues<typeof QuotationStatus>[]
+    __status: TypeFromEnumValues<typeof QuotationStatus>[];
     fromDate: string;
     toDate: string;
     quoteNumber: string;

@@ -355,7 +355,7 @@ const CustomFilter: FC<CustomFilterProps> = (props) => {
             // update the label of the filter
             setUpdatedLabel(getLabel(value));
             // close the dropdown menu
-            setVisible(false);
+            setVisible(true);
           }}
           // disable the button if no option is selected 
           disabled={isDisableUpdateButton}
